@@ -22,6 +22,7 @@ A responsive, clean and simple [Hexo](http://hexo.io) theme for a personal websi
 * 对 Gravatar 使用 V2EX 的 CDN
 * 取消上下篇文章切换，多语言导航支持
 * 支持备案号显示与设置，修改页脚显示顺序
+* 文章页简英正三语文字切换支持
 
 ## General
 

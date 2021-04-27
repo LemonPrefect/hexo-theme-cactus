@@ -20,8 +20,18 @@
         <li><a class="icon" aria-label="<%- __('post.desktop.next') %> " href="<%- url_for(page.next.path) %>"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         <% } %>
         --!>
-        <li><a class="icon" aria-label="<%- __('post.desktop.back_to_top') %> " href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
-        <li><a class="icon" aria-label="<%- __('post.desktop.share') %> " href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+
+        <% if(page.multilanguage != undefined){ %>
+          <% const dictShow = {"zh-TW": "正", "zh-CN": "简", "en": "En"} %>
+          <% const dictLabel = {"zh-TW": "正体中文（台灣標準）", "zh-CN": "中文简体（大陆标准）", "en": "English"} %>
+          <% const multilanguage =  Array.from(page.multilanguage) %>
+          <% Array.prototype.forEach.call(page.multilanguage, function(lang){ %>
+            <li><a class="icon" aria-label="<%- dictLabel[lang] %> " href="<%- (page.lang === lang) ? '#' : url_for(page.path.replace(page.lang, lang)) %>"><%- dictShow[lang] %></a></li>
+          <% }) %>
+        <% } %>
+
+        <li><a class="icon" aria-label="<%- __('post.desktop.back_to_top') %> " href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true"></i></a></li>
+        <li><a class="icon" aria-label="<%- __('post.desktop.share') %> " href="#"><i class="fas fa-share-alt" aria-hidden="true" onclick="$('#share').toggle();return false;"></i></a></li>
       </ul>
       <span id="i-prev" class="info" style="display:none;"><%= __('post.desktop.previous') %></span>
       <span id="i-next" class="info" style="display:none;"><%= __('post.desktop.next') %></span>
