@@ -18,7 +18,7 @@
           <% if (theme.gravatar.email) { %>
             <link rel="shortcut icon" href="<%= gravatar(theme.gravatar.email, 48) %>">
           <% } else { %>
-            <link rel="shortcut icon" href="https://www.gravatar.com/avatar/<%= theme.gravatar.hash %>?s=48">
+            <link rel="shortcut icon" href="https://cdn.v2ex.com/gravatar/<%= theme.gravatar.hash %>?s=48">
           <% } %>
         <% } else { %>
           <link rel="shortcut icon" href="<%= url_for(theme.favicon.desktop.url) %>">
@@ -29,7 +29,7 @@
           <% if (theme.gravatar.email) { %>
             <link rel="icon" type="image/png" href="<%= gravatar(theme.gravatar.email, 192) %>" sizes="192x192">
           <% } else { %>
-            <link rel="icon" type="image/png" href="https://www.gravatar.com/avatar/<%= theme.gravatar.hash %>?s=192">
+            <link rel="icon" type="image/png" href="https://cdn.v2ex.com/gravatar/<%= theme.gravatar.hash %>?s=192">
           <% } %>
         <% } else { %>
           <link rel="icon" type="image/png" href="<%= url_for(theme.favicon.android.url) %>" sizes="192x192">
@@ -40,7 +40,7 @@
           <% if (theme.gravatar.email) { %>
             <link rel="apple-touch-icon" sizes="180x180" href="<%= gravatar(theme.gravatar.email, 180) %>">
           <% } else { %>
-            <link rel="apple-touch-icon" size="180x180" href="https://www.gravatar.com/avatar/<%= theme.gravatar.hash %>?s=180">
+            <link rel="apple-touch-icon" size="180x180" href="https://cdn.v2ex.com/gravatar/<%= theme.gravatar.hash %>?s=180">
           <% } %>
         <% } else { %>
           <link rel="apple-touch-icon" sizes="180x180" href="<%= url_for(theme.favicon.apple.url) %>">

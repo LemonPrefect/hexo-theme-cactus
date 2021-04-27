@@ -19,6 +19,7 @@ A responsive, clean and simple [Hexo](http://hexo.io) theme for a personal websi
 
 * 添加了 `group` 的概念，依托于 hexo-hide-post 实现分组的单独主页渲染。同时修正了主页渲染，当且仅当文章不属于分组且未被隐藏的时候渲染在主页。
 * 修正 layout 语言的渲染，支持 i18n 的多语言渲染。
+* 对 Gravatar 使用 V2EX 的 CDN
 
 ## General
 

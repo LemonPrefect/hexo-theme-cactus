@@ -5,7 +5,7 @@
       <% if (theme.gravatar.email) { %>
         <div id="logo" style="background-image: url(<%- gravatar(theme.gravatar.email) %>);"></div>
       <% } else { %>
-        <div id="logo" style="background-image: url(https://www.gravatar.com/avatar/<%= theme.gravatar.hash %>);"></div>
+        <div id="logo" style="background-image: url(https://cdn.v2ex.com/gravatar/<%= theme.gravatar.hash %>);"></div>
       <% } %>
     <% } else { %>
       <div id="logo" style="background-image: url(<%- url_for(theme.logo.url) %>);"></div>
