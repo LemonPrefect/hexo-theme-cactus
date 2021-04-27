@@ -8,11 +8,17 @@ A responsive, clean and simple [Hexo](http://hexo.io) theme for a personal websi
 
 ## Summary
 
+- [Modified](#modified)
 - [General](#general)
 - [Features](#features)
 - [Install](#install)
 - [Configuration](#configuration)
 - [License](#license)
+
+## Modified
+
+* 添加了 `group` 的概念，依托于 hexo-hide-post 实现分组的单独主页渲染。同时修正了主页渲染，当且仅当文章不属于分组且未被隐藏的时候渲染在主页。
+* 修正 layout 语言的渲染，支持 i18n 的多语言渲染。
 
 ## General
 
@@ -37,7 +43,7 @@ A responsive, clean and simple [Hexo](http://hexo.io) theme for a personal websi
 1. In the `root` directory:
 
     ```git
-    $ git clone https://github.com/probberechts/hexo-theme-cactus.git themes/cactus
+    $ git clone https://github.com/LemonPrefect/hexo-theme-cactus.git themes/cactus
     ```
 
 2. Change the `theme` property in the `config.yml` file.
