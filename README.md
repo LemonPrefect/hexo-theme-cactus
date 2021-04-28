@@ -24,6 +24,9 @@ A responsive, clean and simple [Hexo](http://hexo.io) theme for a personal websi
 * 支持备案号显示与设置，修改页脚显示顺序
 * 文章页简英正三语文字切换支持
 * 首页三语文字切换支持
+* 修改滚动条样式
+* group 页面显示所有文章
+* archive 页面不再显示含有 group 的文章
 
 ## General
 
