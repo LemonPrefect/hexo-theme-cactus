@@ -21,10 +21,12 @@
     <% var startYear = (theme.copyright && theme.copyright.start_year) ? theme.copyright.start_year : new Date().getFullYear() %>
     <%= startYear >= endYear ? endYear : startYear + "-" + endYear %>
     <%= config.author || config.title %>
-    <%= (theme.register.website_register != null) ? theme.register.website_register : "" %>
-    <% if(theme.register.cyber_register != null){ %>
+    <% if(theme.register.website_register != null){ %>
+      <a href="http://beian.miit.gov.cn/"><%= theme.register.website_register %></a>
+    <% } %>
+    <% if(theme.register.cyber_register != null && theme.register.cyber_register_num != null){ %>
       <img src="/images/beian.png"/>
-      <%= theme.register.cyber_register %>
+      <a href= "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=<%= theme.register.cyber_register_num %>"><%= theme.register.cyber_register %></a>
     <% } %>
     
   </div>

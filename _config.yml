@@ -186,3 +186,4 @@ cdn:
 register:
   website_register: 京ICP备xxxxxxxx号 #网站备案号
   cyber_register: 京公网安备xxxxxxxxxxxxxx号 #网站公网安备
+  cyber_register_num: xxxxxxxxxxxxxx #网站公网安备 数字

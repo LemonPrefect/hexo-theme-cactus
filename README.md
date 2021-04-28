@@ -27,6 +27,7 @@ A responsive, clean and simple [Hexo](http://hexo.io) theme for a personal websi
 * 修改滚动条样式
 * group 页面显示所有文章
 * archive 页面不再显示含有 group 的文章
+* 修正备案显示和部分细节渲染
 
 ## General
 
