@@ -24,7 +24,6 @@
         <% if(page.multilanguage != undefined){ %>
           <% const dictShow = {"zh-TW": "正", "zh-CN": "简", "en": "En"} %>
           <% const dictLabel = {"zh-TW": "正体中文（台灣標準）", "zh-CN": "中文简体（大陆标准）", "en": "English"} %>
-          <% const multilanguage =  Array.from(page.multilanguage) %>
           <% Array.prototype.forEach.call(page.multilanguage, function(lang){ %>
             <li><a class="icon" aria-label="<%- dictLabel[lang] %> " href="<%- (page.lang === lang) ? '#' : url_for(page.path.replace(page.lang, lang)) %>"><%- dictShow[lang] %></a></li>
           <% }) %>

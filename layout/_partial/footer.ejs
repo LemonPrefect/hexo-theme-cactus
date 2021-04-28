@@ -5,6 +5,13 @@
         <% for (var i in theme.nav) { %> 
           <li><a href="<%- ((theme.nav[i] === '/archives/' || theme.nav[i] === '/') && page.lang != config.language[0])?('/' + page.lang + url_for(theme.nav[i])):url_for(theme.nav[i]) %>"><%= __('nav.'+i).replace("nav.", "") %></a></li>
         <% } %>
+        <% const dictShow = {"zh-TW": "正", "zh-CN": "简", "en": "En"} %>
+        <% const dictLabel = {"zh-TW": "正体中文（台灣標準）", "zh-CN": "中文简体（大陆标准）", "en": "English"} %>
+        <li>
+        <% Array.prototype.forEach.call(config.language, function(lang){ %>
+          <a href="<%- (page.lang === lang) ? '#' : url_for('/' + lang) %>"><%- dictShow[lang] %></a>
+        <% }) %>
+        </li>
       </ul>
     </nav>
   </div>
